@@ -5,11 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DETRAN-PE</title>
+    <Style>
+        input.botao {
+            background-color: red;
+        }
+        strong {
+            color: red;
+            font-size: 20px;
+            
+
+        }
+    </Style>
 </head>
 <body>
     <h1>Sistema de multas</h1>
     Velocidade do carro <input type="number" name="txtvel" id="txtvel"> KM/h
-    <input type="button" value="Verificar" onclick="calcular()">
+    <input class="botao" type="button" value="Verificar" onclick="calcular()">
     <div id="res">
 
     </div>
@@ -18,7 +29,7 @@
             var txtv = document.querySelector(`input#txtvel`)
             var res = document.querySelector(`div#res`)
             var vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}</strong></p>`
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} KM/h</strong></p>`
             if (vel > 60){
                 res.innerHTML += `<p>Vc está <strong>MULTADO!</strong></p>`
             }
