@@ -15,6 +15,11 @@ section {
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.438);
 }
+option {
+    color: blue;
+    background-color: rgb(202, 202, 240);
+    width: auto;
+}
 footer {
     text-align: center;
     font-style: italic;
